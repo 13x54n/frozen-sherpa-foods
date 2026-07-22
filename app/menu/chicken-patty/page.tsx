@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const images = [
-  "https://images.pexels.com/photos/7262906/pexels-photo-7262906.jpeg",
-  "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/0ce9a511095825d01082bc35143f4e5db3e71af9.jpg",
-  "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/9b0a794390b52c67a1bab5ce3dabb06f942c8961.jpg",
-  "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/232fbbcaa8fb54f636e66abccd64895f42aa90be.jpg",
+    "https://images.unsplash.com/photo-1676887451694-713019c9031f?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1654491462841-c8acb0de47d2?q=80&w=1545&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1609806838045-ead77bbe70e9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1522244451342-a41bf8a13d73?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
 export default function ChickenPattyPage() {

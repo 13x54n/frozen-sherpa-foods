@@ -49,6 +49,15 @@ const featuredItems = [
     image:
       "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
   },
+  {
+    name: "Chicken Patty",
+    slug: "chicken-patty",
+    price: "CAD$14.99",
+    description:
+      "A savory chicken patty made with ground chicken, herbs, and spices, encased in a flaky pastry crust, perfect for a quick snack or meal.",
+    image:
+      "https://images.unsplash.com/photo-1654491462841-c8acb0de47d2?q=80&w=1545&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
 ];
 
 const bannerImages = [
