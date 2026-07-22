@@ -177,17 +177,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blogs Carousel */}
-       <section
-        id="blog"
-        className="mx-10 px-6 py-10 mb-15  backdrop-blur-md border border-white/10 "
-        style={{
-          background:
-            "radial-gradient(120deg, rgba(245,183,63,0.08), transparent 40%), radial-gradient(240deg, rgba(18,120,110,0.12), transparent 45%)",
-          borderRadius: "1.5rem",
-        }}
-      >
-        
+      {/* Blogs */}
+      <section id="blog" className="mx-auto max-w-7xl px-6 py-16">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-semibold">From the Blog</h2>
           <p className="mt-2 text-white/60">
@@ -195,80 +186,35 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Infinite scrolling wrapper */}
-        <div className="relative overflow-hidden">
-          <div className="animate-scroll-left w-max">
-            {/* Original set */}
-            {blogPosts.map((post) => (
-              <a
-                key={post.slug}
-                href={post.slug}
-                className="max-w-[clamp(16rem,45vw,22rem)]"
-              >
-                <article className="group  overflow-hidden">
-                  <div className="relative aspect-[16/10]">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="text-xs text-white/50">{post.date}</p>
-                    <h3 className="mt-2 text-xl font-semibold group-hover:text-yellow-300">
-                      {post.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-6 text-white/65">
-                      {post.excerpt}
-                    </p>
-                    <p className="mt-4 text-sm text-yellow-300">
-                      Read more →
-                    </p>
-                  </div>
-                </article>
-              </a>
-            ))}
-
-            {/* Duplicate set for seamless loop */}
-            {blogPosts.map((post) => (
-              <a
-                key={post.slug}
-                href={post.slug}
-                className="max-w-[clamp(16rem,45vw,22rem)]"
-              >
-                <article className="group  overflow-hidden">
-                  <div className="relative aspect-[16/10]">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <p className="text-xs text-white/50">{post.date}</p>
-                    <h3 className="mt-2 text-xl font-semibold group-hover:text-yellow-300">
-                      {post.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-6 text-white/65">
-                      {post.excerpt}
-                    </p>
-                    <p className="mt-4 text-sm text-yellow-300">
-                      Read more →
-                    </p>
-                  </div>
-                </article>
-              </a>
-            ))}
-          </div>
-
-          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
-            <div className="h-full w-16 bg-gradient-to-r from-[#04070c] to-transparent" />
-          </div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-            <div className="h-full w-16 bg-gradient-to-l from-[#04070c] to-transparent" />
-          </div>
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {blogPosts.map((post) => (
+            <a
+              key={post.slug}
+              href={post.slug}
+              className="group overflow-hidden rounded-3xl border border-white/10 transition hover:border-yellow-400/30"
+            >
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-5">
+                <p className="text-xs text-white/50">{post.date}</p>
+                <h3 className="mt-2 text-xl font-semibold group-hover:text-yellow-300">
+                  {post.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-white/65">
+                  {post.excerpt}
+                </p>
+                <p className="mt-4 text-sm text-yellow-300">
+                  Read more →
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
     </main>
