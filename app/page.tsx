@@ -1,19 +1,21 @@
 // app/page.tsx
 import Image from "next/image";
 import rikikur from "../public/rikikur.webp";
+import Link from "next/link";
 
 const featuredItems = [
   {
     name: "Momo",
+    slug: "momo",
     price: "CAD$34.99 - 50 Pieces",
     description:
       "Handcrafted dumplings filled with juicy chicken, herbs, ginger, garlic, and traditional spices, served with our signature house-made achar.",
     image:
       "https://images.pexels.com/photos/18803174/pexels-photo-18803174.jpeg",
   },
-
   {
     name: "Riki Kur",
+    slug: "riki-kur",
     price: "CAD$4.99 - 5 Pieces",
     description:
       "A traditional Sherpa potato pancake made from grated potatoes, flour, and eggs, pan-fried until golden and served with chutney or achar.",
@@ -22,6 +24,7 @@ const featuredItems = [
   },
   {
     name: "Pork Sekuwa",
+    slug: "pork-sekuwa",
     price: "CAD$11.99 - 600g",
     description:
       "Marinated pork grilled over charcoal or wood fire for a smoky flavor, served with chiura, achar, and sliced vegetables.",
@@ -30,6 +33,7 @@ const featuredItems = [
   },
   {
     name: "Sandwich",
+    slug: "sandwich",
     price: "CAD$19.99 - 5 Pieces",
     description:
       "Grilled chicken breast with a perfectly cooked egg, crisp veggies, and zesty chipotle mayo served on hearty sourdough bread.",
@@ -38,6 +42,7 @@ const featuredItems = [
   },
   {
     name: "Keema Noodles",
+    slug: "keema-noodles",
     price: "CAD$7.99",
     description:
       "A flavorful dish of minced meat cooked with aromatic spices, served over a bed of gluten-free noodles, garnished with fresh herbs and a homemade chilli sauce.",
@@ -140,15 +145,16 @@ export default function Home() {
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-semibold">Our Menu</h2>
           <p className="mt-2 text-white/60">
-            Explore our diverse menu of traditional Sherpa dishes,<br /> crafted with care and
+            Explore our diverse menu of traditional Sherpa dishes, crafted with care and
             passion to bring you the authentic flavors.
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {featuredItems.map((item) => (
-            <article
-              key={item.name}
+            <Link
+              key={item.slug}
+              href={`/menu/${item.slug}`}
               className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0a111a] transition hover:border-yellow-400/30"
             >
               <div className="relative aspect-[16/10]">
@@ -172,7 +178,7 @@ export default function Home() {
                   {item.description}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
