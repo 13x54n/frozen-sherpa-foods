@@ -69,12 +69,12 @@ const bannerImages = [
 
 const blogPosts = [
   {
-    title: "The Story Behind Sherpa Momo",
+    title: "The story behind Frozen Sherpa Foods.",
     excerpt:
       "Discover the origins of momo and how this beloved dumpling became a staple in Sherpa cuisine.",
-    date: "July 10, 2026",
+    date: "July 22, 2026",
     image:
-      "https://images.pexels.com/photos/18803174/pexels-photo-18803174.jpeg",
+      "https://images.unsplash.com/photo-1727342472818-8a85b93b0116?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     slug: "/blog/sherpa-momo-story",
   },
   {
