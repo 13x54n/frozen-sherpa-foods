@@ -83,7 +83,7 @@ const blogPosts = [
       "How our frozen meals are designed to be both convenient and nutritious for busy lifestyles.",
     date: "June 28, 2026",
     image:
-      "https://images.unsplash.com/photo-1592415486689-125cbbfcbee2?q=80&w=1025&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     slug: "/blog/healthy-eating",
   },
   {

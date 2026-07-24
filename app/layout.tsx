@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Frozen Sherpa Foods",
     description:
       "Authentic Sherpa frozen meals in Toronto, Ontario.",
-    url: "https://yourdomain.com",
+    url: "https://www.frozensherpafoods.ca",
     siteName: "Frozen Sherpa Foods",
     type: "website",
   },
@@ -74,7 +74,6 @@ export default function RootLayout({
                   <li><a href="#menu" className="hover:text-yellow-300">Menu</a></li>
                   <li><a href="#blog" className="hover:text-yellow-300">Blog</a></li>
                   <li><a href="/about" className="hover:text-yellow-300">About Us</a></li>
-                  <li><a href="/contact" className="hover:text-yellow-300">Contact</a></li>
                 </ul>
               </div>
 
