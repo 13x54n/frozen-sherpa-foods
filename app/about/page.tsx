@@ -18,7 +18,7 @@ export default function AboutPage() {
           </Link>
         </div>
 
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+        <div className="overflow-hidden ">
           <div className="relative aspect-[16/7] w-full">
             <Image
               src={heroImage}
@@ -82,7 +82,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <article className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
+          <article className=" p-6">
             <h3 className="text-xl font-semibold text-yellow-200">
               Authentic flavor
             </h3>
@@ -92,7 +92,7 @@ export default function AboutPage() {
             </p>
           </article>
 
-          <article className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
+          <article className=" p-6">
             <h3 className="text-xl font-semibold text-yellow-200">
               Convenient meals
             </h3>
@@ -102,7 +102,7 @@ export default function AboutPage() {
             </p>
           </article>
 
-          <article className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
+          <article className=" p-6">
             <h3 className="text-xl font-semibold text-yellow-200">
               Made with care
             </h3>
@@ -113,7 +113,7 @@ export default function AboutPage() {
           </article>
         </div>
 
-        <section className="mt-12 rounded-3xl border border-white/10 bg-[#0d1118] p-6 sm:p-10">
+        <section className="mt-12 p-6 sm:p-10">
           <h2 className="text-2xl font-semibold text-yellow-300">
             Our mission
           </h2>
