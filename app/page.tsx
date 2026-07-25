@@ -11,7 +11,7 @@ const featuredItems = [
     description:
       "Handcrafted dumplings filled with juicy chicken, herbs, ginger, garlic, and traditional spices, served with our signature house-made achar.",
     image:
-      "https://images.pexels.com/photos/18803174/pexels-photo-18803174.jpeg",
+      "https://images.pexels.com/photos/3926123/pexels-photo-3926123.jpeg",
   },
   {
     name: "Riki Kur",
@@ -108,7 +108,7 @@ const blogPosts = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#04070c] text-white">
+    <main className="min-h-screen bg-[#000] text-white">
       {/* Hero / Banner */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,183,63,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(18,120,110,0.25),transparent_30%)]" />
@@ -164,7 +164,7 @@ export default function Home() {
             <Link
               key={item.slug}
               href={`/menu/${item.slug}`}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0a111a] transition hover:border-yellow-400/30"
+              className="group overflow-hidden rounded-3xl border border-white/10 transition hover:border-yellow-400/30"
             >
               <div className="relative aspect-[16/10]">
                 <Image

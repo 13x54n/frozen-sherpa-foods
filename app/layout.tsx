@@ -52,10 +52,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#04070c] text-white">
+      <body className="min-h-full flex flex-col bg-[#000] text-white">
         <div className="flex-1">{children}</div>
 
-        <footer className="border-t border-white/10 bg-[#060b12]">
+        <footer className="border-t border-white/10 bg-[#000]">
           <div className="mx-auto max-w-7xl px-6 py-12">
             <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
               <div>

@@ -4,16 +4,16 @@ import rikikur from "@/public/rikikur.webp";
 import { FoodHero } from "@/components/FoodHero";
 
 const rikiKurImages = [
-  rikikur.src,
-  "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/6240d4866f7caab2e5b9fa4b6372504bf33d73c8.jpg",
-  "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/26195f57b17a15272ae3526252fae8335571a0ba.jpg",
-  "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/a2e24949f7b800734dbb35b6893235641dbe90c4.jpg",
+  "https://imgs.search.brave.com/v2-QqeZUduh8G2rso5uIU3DDZfcb46HHOVghcZn68wc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/b2s3N3Q0Nzk4eXI2/MS5qcGc_d2lkdGg9/NjQwJmNyb3A9c21h/cnQmYXV0bz13ZWJw/JnM9YmI4M2Y0YTQ1/MmMxMDYwYThjZGMw/MWUzZTJhYmUyNWFl/NjIzMDFiNQ",
+  "https://imgs.search.brave.com/DTUWcxjstRdTH8taoKJeaxTgekbMOtX7rcfbSLLLGFM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaWxs/c2hlcnBhdHJla2tp/bmcuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI1LzAzLzIw/MjUwNDA1XzA5NTEz/NC05NDd4MTAyNC5q/cGc",
+  "https://imgs.search.brave.com/jaPXRpuctv3MsxyUGyOAzthzPljrrVshzzivhkR4o1w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtYXBpLmthdGht/YW5kdXBvc3QuY29t/L3RodW1iLnBocD9z/cmM9aHR0cHM6Ly9h/c3NldHMtY2RuLmth/dGhtYW5kdXBvc3Qu/Y29tL3VwbG9hZHMv/c291cmNlL25ld3Mv/MjAyMC9saWZlc3R5/bGUvS2FiaW4tQWRo/aWthcmktVEtQLmpw/ZyZ3PTkwMCZoZWln/aHQ9NjAx",
+  "https://imgs.search.brave.com/L5jwrhyAUyZdWzJFFq9pYYcp8Gao4qY5VRz17s_0mrw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlZ3VuZHJ1ay5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTgvMDcvUmlraWt1/ci1Cb3VkaGEuanBn",
 ];
 
 export default function RikiKurPage() {
   return (
     <main className="min-h-screen bg-[#05070b] text-white">
-        <FoodHero image={rikiKurImages[0]}>
+        <FoodHero image="https://imgs.search.brave.com/sz3kPnP5UL7VoC7M9MBRQ0hzkMCJ9JHkIJrWDZMzimw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qdW5p/Zm9vZHMuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA5/L1BvdGF0by1wYW5j/YWtlLXJpa2lrdXIt/YmF0dGVyLTQ0Mngx/MDI0LmpwZw">
       <section className="mx-auto max-w-7xl px-6 py-10 lg:py-14">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
