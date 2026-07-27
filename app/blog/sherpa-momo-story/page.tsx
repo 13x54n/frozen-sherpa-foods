@@ -57,12 +57,9 @@ export default function SherpaMomoStoryPage() {
                 bannerImage={heroImage}
             />
 
-
-            <section className="mx-auto max-w-6xl px-4 sm:px-6 pb-16">
+            <section className="mx-auto max-w-7xl  pb-16">
                 <article className="overflow-hidden">
-
-
-                    <div className="p-4 sm:p-6 md:p-10">
+                    <div className="">
                         <div className="grid gap-10">
                             <div className="space-y-8">
                                 <section aria-labelledby="how-started">
@@ -89,7 +86,7 @@ export default function SherpaMomoStoryPage() {
 
 
                                     <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                                        <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                        <article className="overflow-hidden transition duration-300 hover:scale-105 border border-white/10 bg-[#0d1118]">
                                             <div className="relative aspect-[4/3]">
                                                 <Image
                                                     src="https://imgs.search.brave.com/6E9wctsQUq3cxKue7g7tRzYMjYpnS8ZmTrJVzPjTztQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ay1yZWNpcGVzLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Ni8wMS9ubjFuczNu/eGFjdHI2bWd4eGFr/cS53ZWJw"
@@ -103,10 +100,10 @@ export default function SherpaMomoStoryPage() {
                                         </article>
 
 
-                                        <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                        <article className="overflow-hidden transition duration-300 hover:scale-105 border border-white/10 bg-[#0d1118]">
                                             <div className="relative aspect-[4/3]">
                                                 <Image
-                                                    src="https://imgs.search.brave.com/kneQRL4gKO1S0YRrTrWU9e1G2JRkBM3jJt_2PHk8Lik/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jbG91/ZGZyb250LXVzLWVh/c3QtMS5pbWFnZXMu/YXJjcHVibGlzaGlu/Zy5jb20vYWR2YW5j/ZWxvY2FsLzJMM0hT/U1ZMSEZCWjdOV1RK/L0RGSUtTTFZBLkpQ/Rw"
+                                                    src="https://images.unsplash.com/photo-1665830749221-bcef0fd8a6cc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                     alt="Summer Sherpa food - boiled potatoes with fermented milk sauce traditional Nepali"
                                                     fill
                                                     className="object-cover"
@@ -116,7 +113,7 @@ export default function SherpaMomoStoryPage() {
                                         </article>
 
 
-                                        <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                        <article className="overflow-hidden transition duration-300 hover:scale-105 border border-white/10 bg-[#0d1118]">
                                             <div className="relative aspect-[4/3]">
                                                 <Image
                                                     src="https://imgs.search.brave.com/xI5XtFiz0N7J2BIOvGqrKmheNDHy3BXfml4rRc8aepA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXZl/LXByb2R1Y3Rpb24u/d2Ntcy5hYmMtY2Ru/Lm5ldC5hdS83Mzdh/ZTNhZWViYTM1ZDAy/YTUxZTgwYzM0ZWI4/Njk1Mz9pbXBvbGlj/eT13Y21zX2Nyb3Bf/cmVzaXplJmNyb3BI/PTIwMDAmY3JvcFc9/Mjk5NyZ4UG9zPTEm/eVBvcz0wJndpZHRo/PTg2MiZoZWlnaHQ9/NTc1"
@@ -146,4 +143,4 @@ export default function SherpaMomoStoryPage() {
             </section>
         </main>
     );
-}
+} 

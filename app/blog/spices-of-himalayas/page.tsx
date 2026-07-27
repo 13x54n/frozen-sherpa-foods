@@ -57,9 +57,9 @@ export default function SpicesOfHimalayasPage() {
             />
 
 
-            <section className="mx-auto max-w-6xl px-4 sm:px-6 pb-16">
+            <section className="mx-auto max-w-6xl pb-16">
                 <article className="overflow-hidden">
-                    <div className="p-4 sm:p-6 md:p-10">
+                    <div className="">
                         <div className="grid gap-10">
                             <div className="space-y-8">
                                 {/* Intro */}
@@ -78,7 +78,7 @@ export default function SpicesOfHimalayasPage() {
 
                                 {/* Images 2 columns - responsive */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/a8b7b5de7e895debc1a80027a08a0155e242ea40.jpg"
@@ -90,7 +90,7 @@ export default function SpicesOfHimalayasPage() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/852b55e51d81c00cc81f7f41cea97c8d0ebfa2ca.jpg"
@@ -159,7 +159,7 @@ export default function SpicesOfHimalayasPage() {
 
                                 {/* Images 2 columns - responsive */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/24229f3b5b5a9a75813c295f414e1e58b95749e8.jpg"
@@ -170,7 +170,7 @@ export default function SpicesOfHimalayasPage() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/d6a3715bee432e85d6f620330852b7fd827cb00d.jpg"
@@ -229,7 +229,7 @@ export default function SpicesOfHimalayasPage() {
 
                                 {/* Images 2 columns - responsive */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/a1c15a7ce48b5e300da1c4f24d6967f4f356cc38.jpg"
@@ -240,7 +240,7 @@ export default function SpicesOfHimalayasPage() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/38c56e608711dd0744e4de3046f32ddcd0aef1fc.jpg"

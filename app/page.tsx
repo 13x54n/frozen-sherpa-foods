@@ -23,24 +23,6 @@ const featuredItems = [
       rikikur.src,
   },
   {
-    name: "Pork Sekuwa",
-    slug: "pork-sekuwa",
-    price: "CAD$11.99 - 600g",
-    description:
-      "Marinated pork grilled over charcoal or wood fire for a smoky flavor, served with chiura, achar, and sliced vegetables.",
-    image:
-      "https://images.unsplash.com/photo-1776766237026-47ced47d3779?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    name: "Sandwich",
-    slug: "sandwich",
-    price: "CAD$19.99 - 5 Pieces",
-    description:
-      "Grilled chicken breast with a perfectly cooked egg, crisp veggies, and zesty chipotle mayo served on hearty sourdough bread.",
-    image:
-      "https://images.unsplash.com/photo-1592415486689-125cbbfcbee2?q=80&w=1025&auto=format&fit=crop",
-  },
-  {
     name: "Keema Noodles",
     slug: "keema-noodles",
     price: "CAD$7.99",
@@ -132,7 +114,7 @@ export default function Home() {
               {bannerImages.map((image) => (
                 <article
                   key={image}
-                  className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md"
+                  className="overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md"
                 >
                   <div className="relative aspect-[4/3]">
                     <Image
@@ -159,12 +141,12 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {featuredItems.map((item) => (
             <Link
               key={item.slug}
               href={`/menu/${item.slug}`}
-              className="group overflow-hidden rounded-3xl border border-white/10 transition hover:border-yellow-400/30"
+              className="group overflow-hidden  border border-white/10 transition duration-300 hover:border-yellow-400/30"
             >
               <div className="relative aspect-[16/10]">
                 <Image
@@ -206,7 +188,7 @@ export default function Home() {
             <a
               key={post.slug}
               href={post.slug}
-              className="group overflow-hidden rounded-3xl border border-white/10 transition hover:border-yellow-400/30"
+              className="group overflow-hidden border border-white/10 transition hover:border-yellow-400/30"
             >
               <div className="relative aspect-[16/10]">
                 <Image

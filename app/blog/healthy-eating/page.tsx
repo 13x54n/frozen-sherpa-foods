@@ -50,49 +50,10 @@ export default function HealthyEatingPage() {
             />
 
 
-            <section className="mx-auto max-w-6xl px-4 sm:px-6 pb-16">
-                <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
-                        <div className="relative aspect-[4/3]">
-                            <Image
-                                src="https://images.unsplash.com/photo-1631379578550-7038263db699?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fHVufDB8fHx8fA%3D%3D"
-                                alt="Fresh cheese ingredients for healthy Sherpa frozen meals"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                priority
-                            />
-                        </div>
-                    </article>
+            <section className="mx-auto max-w-6xl pb-16">
 
-
-                    <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
-                        <div className="relative aspect-[4/3]">
-                            <Image
-                                src="https://images.unsplash.com/photo-1636947112949-8fa88a394e65?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fHVufDB8fHx8fA%3D%3D"
-                                alt="Summer Sherpa food - traditional Himalayan cuisine"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            />
-                        </div>
-                    </article>
-
-
-                    <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
-                        <div className="relative aspect-[4/3]">
-                            <Image
-                                src="https://images.unsplash.com/photo-1705475388190-775066fd69a5?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fHVufDB8fHx8fA%3D%3D"
-                                alt="Sherpa New Year khapseys - authentic Nepali celebration food"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            />
-                        </div>
-                    </article>
-                </div>
                 <article className="overflow-hidden">
-                    <div className="p-4 sm:p-6 md:p-10">
+                    <div className="">
                         <div className="grid gap-10">
                             <div className="space-y-8">
                                 {/* Why healthy eating matters */}
@@ -171,6 +132,46 @@ export default function HealthyEatingPage() {
                         </div>
                     </div>
                 </article>
+                <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <article className="overflow-hidden border border-white/10 bg-[#0d1118]">
+                        <div className="relative aspect-[4/3]">
+                            <Image
+                                src="https://images.unsplash.com/photo-1631379578550-7038263db699?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fHVufDB8fHx8fA%3D%3D"
+                                alt="Fresh cheese ingredients for healthy Sherpa frozen meals"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                priority
+                            />
+                        </div>
+                    </article>
+
+
+                    <article className="overflow-hidden border border-white/10 bg-[#0d1118]">
+                        <div className="relative aspect-[4/3]">
+                            <Image
+                                src="https://images.unsplash.com/photo-1636947112949-8fa88a394e65?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fHVufDB8fHx8fA%3D%3D"
+                                alt="Summer Sherpa food - traditional Himalayan cuisine"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                        </div>
+                    </article>
+
+
+                    <article className="overflow-hidden border border-white/10 bg-[#0d1118]">
+                        <div className="relative aspect-[4/3]">
+                            <Image
+                                src="https://images.unsplash.com/photo-1705475388190-775066fd69a5?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fHVufDB8fHx8fA%3D%3D"
+                                alt="Sherpa New Year khapseys - authentic Nepali celebration food"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            />
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
     );

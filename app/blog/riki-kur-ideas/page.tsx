@@ -57,9 +57,9 @@ export default function RikiKurIdeasPage() {
             />
 
 
-            <section className="mx-auto max-w-6xl px-4 sm:px-6 pb-16">
+            <section className="mx-auto max-w-6xl pb-16">
                 <article className="overflow-hidden">
-                    <div className="p-4 sm:p-6 md:p-10">
+                    <div className="">
                         <div className="grid gap-10">
                             <div className="space-y-8">
                                 {/* Intro: what is riki kur */}
@@ -78,7 +78,7 @@ export default function RikiKurIdeasPage() {
 
                                 {/* Images after intro (responsive grid) */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/aba75546c70af4f434fd992a8dc829c6a6e0f7d4.jpg"
@@ -90,7 +90,7 @@ export default function RikiKurIdeasPage() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]">
+                                    <div className="overflow-hidden border border-white/10 bg-[#0d1118]">
                                         <div className="relative aspect-[4/3]">
                                             <Image
                                                 src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/b1f6ddd2068386cded66fa4e3648d7cf8085269d.jpg"

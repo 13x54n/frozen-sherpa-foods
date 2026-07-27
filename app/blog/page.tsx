@@ -18,12 +18,12 @@ export default function BlogIndexPage() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-4">
           {blogPosts.map((post) => (
             <Link
               key={post.slug}
               href={post.slug}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118] transition hover:border-yellow-300/40"
+              className="group overflow-hidden border border-white/10 transition hover:border-yellow-300/40"
             >
               <div className="relative aspect-[16/9]">
                 <Image

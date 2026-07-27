@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import rikikur from "@/public/rikikur.webp";
 import { FoodHero } from "@/components/FoodHero";
 
 const rikiKurImages = [
@@ -13,140 +12,139 @@ const rikiKurImages = [
 export default function RikiKurPage() {
   return (
     <main className="min-h-screen bg-[#05070b] text-white">
-        <FoodHero image="https://imgs.search.brave.com/sz3kPnP5UL7VoC7M9MBRQ0hzkMCJ9JHkIJrWDZMzimw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qdW5p/Zm9vZHMuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA5/L1BvdGF0by1wYW5j/YWtlLXJpa2lrdXIt/YmF0dGVyLTQ0Mngx/MDI0LmpwZw">
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <p className="inline-flex rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-1 text-sm text-yellow-300">
-              Frozen Sherpa Foods
-            </p>
+      <FoodHero image="https://images.unsplash.com/photo-1771448234279-21905f3e2db1?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:py-14">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div>
+              <p className="inline-flex rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-1 text-sm text-yellow-300">
+                Frozen Sherpa Foods
+              </p>
 
-            <h1 className="mt-6 max-w-xl text-5xl font-black tracking-tight sm:text-7xl">
-              RIKI KUR
-            </h1>
+              <h1 className="mt-6 max-w-xl text-5xl font-black tracking-tight sm:text-7xl">
+                RIKI KUR
+              </h1>
 
-            <p className="mt-4 max-w-lg text-base leading-7 text-white/70">
-              A traditional Sherpa potato pancake made from grated potatoes, flour,
-              and eggs, pan-fried until golden and served with chutney or achar.
-            </p>
+              <p className="mt-4 max-w-lg text-base leading-7 text-white/70">
+                A traditional Sherpa potato pancake made from grated potatoes, flour,
+                and eggs, pan-fried until golden and served with chutney or achar.
+              </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
-                CAD$4.99
-              </span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
-                5 Pieces
-              </span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
-                Crispy & Golden
-              </span>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
+                  CAD$4.99 - 5 Pieces
+                </span>
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
+                  Gluten-Free
+                </span>
+              </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                <div className="transition duration-300 hover:border-yellow-400/30 border border-white/10 p-5">
+                  <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
+                    Ingredients
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-white/65">
+                    Potatoes, whole-grain flour, eggs, salt, spices, and oil for pan frying.
+                  </p>
+                </div>
+
+                <div className="transition duration-300 hover:border-yellow-400/30 border border-white/10 p-5">
+                  <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
+                    Taste profile
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-white/65">
+                    Crispy outside, soft inside, with a comforting savory flavor.
+                  </p>
+                </div>
+
+                <div className="transition duration-300 hover:border-yellow-400/30 border border-white/10 p-5">
+                  <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
+                    Serving
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-white/65">
+                    Best served warm with butter, sauce made with Kefir, chilli, and salt sauce.
+                  </p>
+                </div>
+
+                <div className="transition duration-300 hover:border-yellow-400/30 border border-white/10 p-5">
+                  <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
+                    Good for
+                  </h2>
+                  <p className="mt-3 text-sm leading-6 text-white/65">
+                    Breakfast, snack time, or a light comforting meal.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <Link
+                  href="/#menu"
+                  className="inline-flex rounded-full bg-yellow-300 px-5 py-3 text-sm font-semibold text-black transition hover:bg-yellow-200"
+                >
+                  Back to Menu
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
-                <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
-                  Ingredients
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-white/65">
-                  Potatoes, flour, eggs, salt, spices, and oil for pan frying.
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
-                <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
-                  Taste profile
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-white/65">
-                  Crispy outside, soft inside, with a comforting savory flavor.
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
-                <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
-                  Serving
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-white/65">
-                  Best served warm with chutney, achar, or a side of tea.
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
-                <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
-                  Good for
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-white/65">
-                  Breakfast, snack time, or a light comforting meal.
-                </p>
+            <div className="relative">
+              <div className="absolute -left-10 -top-8 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
+              <div className="overflow-hidden border border-white/10 shadow-2xl">
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src="https://imgs.search.brave.com/W_y4sYCIyHlXoMxaMP3S8t3yz4SQA_W--ZjbCsfdp7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qdW5p/Zm9vZHMuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA5/L1Jpa2lrdXItQWxv/by1Sb3RpLVNoZXJw/YS1Qb3RhdG8tUGFu/Y2FrZS0lRTAlQTQl/ODYlRTAlQTQlQjIl/RTAlQTUlODElRTAl/QTQlOTUlRTAlQTUl/OEItJUUwJUE0JUIw/JUUwJUE1JThCJUUw/JUE0JTlGJUUwJUE1/JTgwLS0zNjB4NDgw/LmpwZw"
+                    alt="Riki Kur hero"
+                    fill
+                    className="object-cover transition duration-500 hover:scale-105"
+                  />
+                </div>
               </div>
             </div>
+          </div>
 
-            <div className="mt-8">
-              <Link
-                href="/#menu"
-                className="inline-flex rounded-full bg-yellow-300 px-5 py-3 text-sm font-semibold text-black transition hover:bg-yellow-200"
+          <div className="mt-12 grid gap-4 lg:grid-cols-3">
+            <div className="transition duration-300 hover:border-yellow-400/30 border border-white/10 p-6">
+              <p className="text-sm text-yellow-300">👏 Why people love it</p>
+              <p className="mt-3 text-sm leading-7 text-white/70">
+                Golden, crispy on the outside and soft on the inside, riki kur delivers the comforting taste of home in every bite. Made from finely grated potatoes with traditional Sherpa spices, these hearty pancakes are filling, satisfying, and deeply nostalgic — perfect for breakfast, snacks, or light meals any time of day.
+              </p>
+            </div>
+
+
+            <div className="transition duration-300 hover:border-yellow-400/30 border border-white/10 p-6">
+              <p className="text-sm text-yellow-300">📦 Storage</p>
+              <p className="mt-3 text-sm leading-7 text-white/70">
+                Keep frozen at -18°C or below until ready to cook. For best results, pan-fry from frozen over medium heat for 3–4 minutes per side until golden and crisp, or reheat in a 375°F (190°C) oven for 10–12 minutes. Avoid microwaving, as it can make the pancakes soggy. Serve hot and do not refreeze after thawing.
+              </p>
+            </div>
+
+
+            <div className="transition duration-300 hover:border-yellow-400/30 border border-white/10 p-6">
+              <p className="text-sm text-yellow-300">👨‍🍳 Chef's note</p>
+              <p className="mt-3 text-sm leading-7 text-white/70">
+                For the most authentic Sherpa experience, serve warm with traditional somar (fermented cheese sauce) or a spicy tomato achaar. You can also top with a fried egg, fresh spring onions, or use riki kur as a base for creative toppings like cheese, keema, or sautéed vegetables for a modern twist.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {rikiKurImages.map((src, index) => (
+              <article
+                key={src}
+                className="overflow-hidden border border-white/10"
               >
-                Back to Menu
-              </Link>
-            </div>
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={src}
+                    alt={`Riki Kur image ${index + 1}`}
+                    fill
+                    className="object-cover transition duration-500 hover:scale-105"
+                  />
+                </div>
+              </article>
+            ))}
           </div>
-
-          <div className="relative">
-            <div className="absolute -left-10 -top-8 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#0d1118] shadow-2xl">
-              <div className="relative aspect-[4/5]">
-                <Image
-                  src={rikiKurImages[0]}
-                  alt="Riki Kur hero"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {rikiKurImages.map((src, index) => (
-            <article
-              key={src}
-              className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]"
-            >
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={src}
-                  alt={`Riki Kur image ${index + 1}`}
-                  fill
-                  className="object-cover transition duration-500 hover:scale-105"
-                />
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-12 grid gap-4 lg:grid-cols-3">
-          <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
-            <p className="text-sm text-yellow-300">Why people love it</p>
-            <p className="mt-3 text-sm leading-7 text-white/70">
-              Simple, hearty, and nostalgic with a rich homemade feel.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
-            <p className="text-sm text-yellow-300">Storage</p>
-            <p className="mt-3 text-sm leading-7 text-white/70">
-              Keep frozen until ready to cook, then heat until crisp and hot.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
-            <p className="text-sm text-yellow-300">Chef’s note</p>
-            <p className="mt-3 text-sm leading-7 text-white/70">
-              Pairs well with spicy achar and a warm drink.
-            </p>
-          </div>
-        </div>
-      </section>
-        </FoodHero>
+        </section>
+      </FoodHero>
     </main>
   );
 }

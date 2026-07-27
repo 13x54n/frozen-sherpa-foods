@@ -4,16 +4,16 @@ import Link from "next/link";
 
 const images = [
     "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
-    "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/87429e2a21bcc0fd2544389e34485efb6a9c0f17.jpg",
+    "https://imgs.search.brave.com/1NjI-XslwU95bOtnoWYsQZ2DsH54nW6bFByJuE7GgsQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzFmLzEz/L2EwLzFmMTNhMDJk/MDZhYjBhZjBhMGU0/YTJlOTIwYTIwMDFl/LmpwZw",
     "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/1b5410d795214c41abf0aae96fd9293706d20820.jpg",
-    "https://pplx-res.cloudinary.com/image/upload/pplx_search_images/b132ba34d992e3f1d9f940da301af81e27e62263.jpg",
+    "https://imgs.search.brave.com/OLVwSIH28CGCiiszoRMUZ-TzO0tsqlficHvUIMu6mEw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odW5n/ZXJlbmQuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzAy/L0NoaWNrZW4tS2Vl/bWEtTm9vZGxlcy1E/ZWxpdmVyeS5qcGc",
 ];
 
 export default function KeemaNoodlesPage() {
     return (
         <main className="min-h-screen bg-[#05070b] text-white">
             <FoodHero
-                image={images[2]}
+                image="https://images.unsplash.com/photo-1603661688298-870c8958ebf8?q=80&w=704&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             >
                 <section className="mx-auto max-w-7xl px-6 py-10 lg:py-14">
                     <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -36,15 +36,12 @@ export default function KeemaNoodlesPage() {
                                     CAD$7.99
                                 </span>
                                 <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
-                                    Single Serve
-                                </span>
-                                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
                                     Rich & Savory
                                 </span>
                             </div>
 
                             <div className="mt-10 grid gap-4 sm:grid-cols-2">
-                                <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
+                                <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-5">
                                     <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
                                         Ingredients
                                     </h2>
@@ -53,7 +50,7 @@ export default function KeemaNoodlesPage() {
                                     </p>
                                 </div>
 
-                                <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
+                                <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-5">
                                     <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
                                         Taste profile
                                     </h2>
@@ -62,7 +59,7 @@ export default function KeemaNoodlesPage() {
                                     </p>
                                 </div>
 
-                                <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
+                                <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-5">
                                     <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
                                         Serving
                                     </h2>
@@ -71,7 +68,7 @@ export default function KeemaNoodlesPage() {
                                     </p>
                                 </div>
 
-                                <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-5">
+                                <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-5">
                                     <h2 className="text-sm font-semibold uppercase tracking-widest text-yellow-300">
                                         Good for
                                     </h2>
@@ -93,16 +90,41 @@ export default function KeemaNoodlesPage() {
 
                         <div className="relative">
                             <div className="absolute -left-10 -top-8 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
-                            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#0d1118] shadow-2xl">
+                            <div className="overflow-hidden border border-white/10 \ shadow-2xl">
                                 <div className="relative aspect-[4/5]">
                                     <Image
-                                        src={images[0]}
+                                        src="https://imgs.search.brave.com/or8oMxqWCO-XIkdw5aCBRCk_NkHpwoz6FjU2PZ5gD9A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzA0LzIz/Lzg4LzA0MjM4ODkw/NWE0NjM5NjZlMDMy/NGVmMTYyYTBmYjY0/LmpwZw"
                                         alt="Keema noodles hero"
                                         fill
-                                        className="object-cover"
+                                        className="object-cover transition duration-500 hover:scale-105"
                                     />
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div className="mt-12 grid gap-4 lg:grid-cols-3">
+                        <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-6">
+                            <p className="text-sm text-yellow-300">👏 Why people love it</p>
+                            <p className="mt-3 text-sm leading-7 text-white/70">
+                                It is hearty, flavorful, and easy to enjoy any time of day. Savory minced meat is cooked with warm spices and tossed with noodles for a satisfying balance of comfort and bold taste. Each bite delivers a rich, slightly spiced depth that feels both familiar and exciting.
+                            </p>
+                        </div>
+
+                        <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-6">
+                            <p className="text-sm text-yellow-300">📦 Storage</p>
+                            <p className="mt-3 text-sm leading-7 text-white/70">
+                                Keep refrigerated for up to 3 days or frozen for longer storage. Reheat thoroughly until steaming hot before serving. For best texture, reheat on a pan or stovetop rather than a microwave.
+                            </p>
+                        </div>
+
+                        <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-6">
+                            <p className="text-sm text-yellow-300">👨‍🍳 Chef’s note</p>
+                            <p className="mt-3 text-sm leading-7 text-white/70">
+                                Finish with fresh herbs, chili oil, or extra chutney to elevate the flavors. A squeeze of lime or a sprinkle of crispy fried onions adds a bright and crunchy contrast. Quick lunches, late-night cravings, or a hearty meal on the go. It is equally satisfying as a standalone dish or paired with a light side.
+                            </p>
                         </div>
                     </div>
 
@@ -110,7 +132,7 @@ export default function KeemaNoodlesPage() {
                         {images.map((src, index) => (
                             <article
                                 key={src}
-                                className="overflow-hidden rounded-3xl border border-white/10 bg-[#0d1118]"
+                                className="overflow-hidden border border-white/10 \"
                             >
                                 <div className="relative aspect-[4/3]">
                                     <Image
@@ -122,29 +144,6 @@ export default function KeemaNoodlesPage() {
                                 </div>
                             </article>
                         ))}
-                    </div>
-
-                    <div className="mt-12 grid gap-4 lg:grid-cols-3">
-                        <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
-                            <p className="text-sm text-yellow-300">Why people love it</p>
-                            <p className="mt-3 text-sm leading-7 text-white/70">
-                                It is hearty, flavorful, and easy to enjoy any time of day.
-                            </p>
-                        </div>
-
-                        <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
-                            <p className="text-sm text-yellow-300">Storage</p>
-                            <p className="mt-3 text-sm leading-7 text-white/70">
-                                Keep refrigerated or frozen and reheat until steaming hot.
-                            </p>
-                        </div>
-
-                        <div className="rounded-3xl border border-white/10 bg-[#0d1118] p-6">
-                            <p className="text-sm text-yellow-300">Chef’s note</p>
-                            <p className="mt-3 text-sm leading-7 text-white/70">
-                                Finish with fresh herbs, chili oil, or extra chutney.
-                            </p>
-                        </div>
                     </div>
                 </section>
             </FoodHero>

@@ -3,7 +3,7 @@ import Image from "next/image";
 export function BlogHeader({date, title, description, bannerImage}: {date?: string, title?: string, description?: string, bannerImage?: string}) {
   return (
     <section className="bg-black text-white">
-      <div className="mx-auto grid min-h-[80vh] max-w-7xl items-center gap-12 px-6 py-12 lg:grid-cols-2">
+      <div className="mx-auto grid min-h-[80vh] max-w-7xl items-center gap-12 py-12 lg:grid-cols-2">
         <div className="relative mx-auto w-full max-w-[420px] overflow-hidden border border-white/10 bg-[#0d1118]">
           <div className="relative aspect-[3/4]">
             <Image
