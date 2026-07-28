@@ -5,7 +5,7 @@ import { blogPosts } from "@/constants/blogPosts";
 export default function BlogIndexPage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <div className="mx-auto max-w-6xl px-6 py-10">
+      <div className="mx-auto max-w-7xl py-10">
         <div className="mb-10">
           <p className="text-sm uppercase tracking-[0.2em] text-yellow-300">
             Blog
@@ -34,14 +34,14 @@ export default function BlogIndexPage() {
                 />
               </div>
 
-              <div className="p-5">
-                <div className="text-sm text-white/50">{post.date}</div>
+              <div className="">
                 <h2 className="mt-2 text-xl font-semibold text-white">
                   {post.title}
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-white/70">
                   {post.excerpt}
                 </p>
+                <div className="text-sm text-white/50">{post.date}</div>
                 <div className="mt-4 text-sm text-yellow-300">
                   Read more →
                 </div>
