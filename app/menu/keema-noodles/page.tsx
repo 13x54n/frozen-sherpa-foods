@@ -17,6 +17,19 @@ export default function KeemaNoodlesPage() {
             >
                 <section className="mx-auto max-w-7xl px-6 py-10 lg:py-14">
                     <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+                        <div className="relative">
+                            <div className="absolute -left-10 -top-8 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
+                            <div className="overflow-hidden border border-white/10 \ shadow-2xl">
+                                <div className="relative aspect-[4/5]">
+                                    <Image
+                                        src="https://imgs.search.brave.com/or8oMxqWCO-XIkdw5aCBRCk_NkHpwoz6FjU2PZ5gD9A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzA0LzIz/Lzg4LzA0MjM4ODkw/NWE0NjM5NjZlMDMy/NGVmMTYyYTBmYjY0/LmpwZw"
+                                        alt="Keema noodles hero"
+                                        fill
+                                        className="object-cover transition duration-500 hover:scale-105"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <p className="inline-flex rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-1 text-sm text-yellow-300">
                                 Frozen Sherpa Foods
@@ -88,22 +101,10 @@ export default function KeemaNoodlesPage() {
                             </div>
                         </div>
 
-                        <div className="relative">
-                            <div className="absolute -left-10 -top-8 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
-                            <div className="overflow-hidden border border-white/10 \ shadow-2xl">
-                                <div className="relative aspect-[4/5]">
-                                    <Image
-                                        src="https://imgs.search.brave.com/or8oMxqWCO-XIkdw5aCBRCk_NkHpwoz6FjU2PZ5gD9A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzA0LzIz/Lzg4LzA0MjM4ODkw/NWE0NjM5NjZlMDMy/NGVmMTYyYTBmYjY0/LmpwZw"
-                                        alt="Keema noodles hero"
-                                        fill
-                                        className="object-cover transition duration-500 hover:scale-105"
-                                    />
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
-                    
+
 
                     <div className="mt-12 grid gap-4 lg:grid-cols-3">
                         <div className=" border border-white/10 duration-300 hover:border-yellow-400/30 p-6">

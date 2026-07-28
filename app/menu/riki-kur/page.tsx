@@ -15,6 +15,20 @@ export default function RikiKurPage() {
       <FoodHero image="https://images.unsplash.com/photo-1771448234279-21905f3e2db1?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         <section className="mx-auto max-w-7xl px-6 py-10 lg:py-14">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+
+            <div className="relative">
+              <div className="absolute -left-10 -top-8 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
+              <div className="overflow-hidden border border-white/10 shadow-2xl">
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src="https://imgs.search.brave.com/W_y4sYCIyHlXoMxaMP3S8t3yz4SQA_W--ZjbCsfdp7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qdW5p/Zm9vZHMuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA5/L1Jpa2lrdXItQWxv/by1Sb3RpLVNoZXJw/YS1Qb3RhdG8tUGFu/Y2FrZS0lRTAlQTQl/ODYlRTAlQTQlQjIl/RTAlQTUlODElRTAl/QTQlOTUlRTAlQTUl/OEItJUUwJUE0JUIw/JUUwJUE1JThCJUUw/JUE0JTlGJUUwJUE1/JTgwLS0zNjB4NDgw/LmpwZw"
+                    alt="Riki Kur hero"
+                    fill
+                    className="object-cover transition duration-500 hover:scale-105"
+                  />
+                </div>
+              </div>
+            </div>
             <div>
               <p className="inline-flex rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-1 text-sm text-yellow-300">
                 Frozen Sherpa Foods
@@ -86,19 +100,7 @@ export default function RikiKurPage() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute -left-10 -top-8 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
-              <div className="overflow-hidden border border-white/10 shadow-2xl">
-                <div className="relative aspect-[4/5]">
-                  <Image
-                    src="https://imgs.search.brave.com/W_y4sYCIyHlXoMxaMP3S8t3yz4SQA_W--ZjbCsfdp7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qdW5p/Zm9vZHMuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA5/L1Jpa2lrdXItQWxv/by1Sb3RpLVNoZXJw/YS1Qb3RhdG8tUGFu/Y2FrZS0lRTAlQTQl/ODYlRTAlQTQlQjIl/RTAlQTUlODElRTAl/QTQlOTUlRTAlQTUl/OEItJUUwJUE0JUIw/JUUwJUE1JThCJUUw/JUE0JTlGJUUwJUE1/JTgwLS0zNjB4NDgw/LmpwZw"
-                    alt="Riki Kur hero"
-                    fill
-                    className="object-cover transition duration-500 hover:scale-105"
-                  />
-                </div>
-              </div>
-            </div>
+
           </div>
 
           <div className="mt-12 grid gap-4 lg:grid-cols-3">

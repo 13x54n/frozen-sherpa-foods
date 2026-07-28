@@ -15,6 +15,19 @@ export default function MomoPage() {
       <FoodHero image={momoImages[0]}>
         <section className="mx-auto max-w-7xl px-6 py-10 lg:py-14">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div className="relative">
+              <div className="absolute -left-10 -top-8 h-40 w-40  bg-yellow-500/20 blur-3xl" />
+              <div className="overflow-hidden border border-white/10 bg-[#0d1118] shadow-2xl">
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src="https://images.pexels.com/photos/36173247/pexels-photo-36173247.jpeg"
+                    alt="Momo hero"
+                    fill
+                    className="object-cover transition duration-500 hover:scale-105"
+                  />
+                </div>
+              </div>
+            </div>
             <div>
 
               <p className="inline-flex mt-8 rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-1 text-sm text-yellow-300">
@@ -92,19 +105,7 @@ export default function MomoPage() {
 
             </div>
 
-            <div className="relative">
-              <div className="absolute -left-10 -top-8 h-40 w-40  bg-yellow-500/20 blur-3xl" />
-              <div className="overflow-hidden border border-white/10 bg-[#0d1118] shadow-2xl">
-                <div className="relative aspect-[4/5]">
-                  <Image
-                    src="https://images.pexels.com/photos/36173247/pexels-photo-36173247.jpeg"
-                    alt="Momo hero"
-                    fill
-                    className="object-cover transition duration-500 hover:scale-105"
-                  />
-                </div>
-              </div>
-            </div>
+
           </div>
 
           <hr className="mt-8 border border-white/10" />
