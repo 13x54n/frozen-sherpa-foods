@@ -150,8 +150,8 @@ export default function MenuPage() {
                       {item.name}
                     </h3>
                   </div>
-                  <p className="text-right text-yellow-300">{item.price}</p>
                 </div>
+                  <p className="text-yellow-300">{item.price}</p>
 
                 <p className="mt-3 text-sm leading-6 text-white/65">
                   {item.description}
