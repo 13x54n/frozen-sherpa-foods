@@ -87,6 +87,27 @@ const featuredItems = [
     spicy: false,
     popular: false,
   },
+  {
+    name: "Tihar Combo 1",
+    slug: "tihar-combo-1",
+    price: "CAD$39.99",
+    description:
+      "Limited-time Tihar offer: 50 handcrafted momos + 1 serving of keema noodles. Pre-order yours today — Nov 7-11, while stock lasts.",
+    image: "https://images.pexels.com/photos/3926123/pexels-photo-3926123.jpeg",
+    spicy: true,
+    popular: true,
+  },
+  {
+    name: "Tihar Combo 2",
+    slug: "tihar-combo-2",
+    price: "CAD$74.99",
+    description:
+      "Limited-time Tihar offer: 100 handcrafted momos + 2 servings of keema noodles. Perfect for Laxmi Puja and Bhai Tika family feasts.",
+    image:
+      "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
+    spicy: true,
+    popular: true,
+  },
 ];
 
 export default function MenuPage() {
