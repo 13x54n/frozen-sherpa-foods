@@ -11,7 +11,7 @@ const featuredItems = [
     description:
       "Handcrafted Nepali-style dumplings filled with juicy chicken, herbs, ginger, garlic, and traditional Sherpa spices. Served with house-made achar. Perfect frozen momo for quick meals in Scarborough and Toronto.",
     image:
-      "https://images.pexels.com/photos/3926123/pexels-photo-3926123.jpeg",
+      "https://ik.imagekit.io/qd2adfgrv/momo-cover.avif",
   },
   {
     name: "Riki Kur",
