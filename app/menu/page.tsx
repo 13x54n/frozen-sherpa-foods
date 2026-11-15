@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Metadata } from "next";
-import rikikur from "@/public/rikikur.webp";
+import { AddToCartButton } from "@/components/AddToCartButton";
+import { getCatalogMenu } from "@/lib/square-catalog";
 
 export const metadata: Metadata = {
   title: "Menu | Frozen Sherpa Foods - Authentic Himalayan Meals Toronto",
@@ -44,73 +44,12 @@ export const metadata: Metadata = {
   },
 };
 
-const featuredItems = [
-  {
-    name: "Momo",
-    slug: "momo",
-    price: "CAD$34.99 - 50 Pieces",
-    description:
-      "Handcrafted dumplings filled with juicy chicken, herbs, ginger, garlic, and traditional spices, served with our signature house-made achar.",
-    image: "https://images.pexels.com/photos/3926123/pexels-photo-3926123.jpeg",
-    spicy: true,
-    popular: true,
-  },
-  {
-    name: "Riki Kur",
-    slug: "riki-kur",
-    price: "CAD$4.99 - 5 Pieces",
-    description:
-      "A traditional Sherpa potato pancake made from grated potatoes, flour, and eggs, pan-fried until golden and served with chutney or achar.",
-    image: rikikur.src,
-    spicy: false,
-    popular: true,
-  },
-  {
-    name: "Keema Noodles",
-    slug: "keema-noodles",
-    price: "CAD$7.99",
-    description:
-      "A flavorful dish of minced meat cooked with aromatic spices, served over a bed of gluten-free noodles, garnished with fresh herbs and a homemade chilli sauce.",
-    image:
-      "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
-    spicy: true,
-    popular: true,
-  },
-  {
-    name: "Chicken Patty",
-    slug: "chicken-patty",
-    price: "CAD$14.99",
-    description:
-      "A savory chicken patty made with ground chicken, herbs, and spices, encased in a flaky pastry crust, perfect for a quick snack or meal.",
-    image:
-      "https://images.unsplash.com/photo-1654491462841-c8acb0de47d2?q=80&w=1545&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    spicy: false,
-    popular: false,
-  },
-  {
-    name: "Tihar Combo 1",
-    slug: "tihar-combo-1",
-    price: "CAD$39.99",
-    description:
-      "Limited-time Tihar offer: 50 handcrafted momos + 1 serving of keema noodles. Pre-order yours today — Nov 7-11, while stock lasts.",
-    image: "https://images.pexels.com/photos/3926123/pexels-photo-3926123.jpeg",
-    spicy: true,
-    popular: true,
-  },
-  {
-    name: "Tihar Combo 2",
-    slug: "tihar-combo-2",
-    price: "CAD$74.99",
-    description:
-      "Limited-time Tihar offer: 100 handcrafted momos + 2 servings of keema noodles. Perfect for Laxmi Puja and Bhai Tika family feasts.",
-    image:
-      "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
-    spicy: true,
-    popular: true,
-  },
-];
+// Menu items come from the Square catalog (see lib/square-catalog.ts):
+// name, description, price and stock are read from Square, and items
+// not in Square — e.g. the expired Tihar combos — no longer show.
 
-export default function MenuPage() {
+export default async function MenuPage() {
+  const { items: featuredItems } = await getCatalogMenu();
   return (
     <main className="min-h-screen bg-black text-white">
       <section className="relative h-[50vh] overflow-hidden sm:h-[60vh] md:h-[70vh]">
@@ -136,9 +75,8 @@ export default function MenuPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {featuredItems.map((item, index) => (
-            <Link
+            <article
               key={item.slug}
-              href={`/menu/${item.slug}`}
               className="group overflow-hidden border border-white/10 transition duration-300 hover:border-yellow-400/30"
             >
               <div className="relative aspect-[16/10]">
@@ -172,15 +110,18 @@ export default function MenuPage() {
                     </h3>
                   </div>
                 </div>
-                  <p className="text-yellow-300">{item.price}</p>
+                  <p className="text-yellow-300">
+                    CAD${(item.priceCents / 100).toFixed(2)} - {item.unit}
+                  </p>
 
                 <p className="mt-3 text-sm leading-6 text-white/65">
                   {item.description}
                 </p>
-
-                <p className="mt-4 text-sm text-yellow-300">View item →</p>
               </div>
-            </Link>
+              <div className="border-t border-white/10 p-5">
+                <AddToCartButton slug={item.slug} />
+              </div>
+            </article>
           ))}
         </div>
       </section>

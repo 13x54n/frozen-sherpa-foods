@@ -1,69 +1,17 @@
 // app/page.tsx
 import Image from "next/image";
 import rikikur from "../public/rikikur.webp";
-import Link from "next/link";
+import { AddToCartButton } from "@/components/AddToCartButton";
+import { getCatalogMenu } from "@/lib/square-catalog";
 
-const featuredItems = [
-  {
-    name: "Momo",
-    slug: "momo",
-    price: "CAD$34.99 - 50 Pieces",
-    description:
-      "Handcrafted Nepali-style dumplings filled with juicy chicken, herbs, ginger, garlic, and traditional Sherpa spices. Served with house-made achar. Perfect frozen momo for quick meals in Scarborough and Toronto.",
-    image:
-      "https://ik.imagekit.io/qd2adfgrv/momo-cover.avif",
-  },
-  {
-    name: "Riki Kur",
-    slug: "riki-kur",
-    price: "CAD$4.99 - 5 Pieces",
-    description:
-      "Traditional Sherpa potato pancake made from grated potatoes, flour, and eggs, pan-fried until golden. A hearty Himalayan breakfast or snack, now available as frozen food in Scarborough and the GTA.",
-    image:
-      rikikur.src,
-  },
-  {
-    name: "Keema Noodles",
-    slug: "keema-noodles",
-    price: "CAD$8.99 - 1 Serving",
-    description:
-      "Flavorful minced meat cooked with aromatic Himalayan spices, served over gluten-free noodles and garnished with fresh herbs and homemade chilli sauce. A quick, healthy frozen meal in Scarborough and Toronto.",
-    image:
-      "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
-  },
-  {
-    name: "Chicken Patty",
-    slug: "chicken-patty",
-    price: "CAD$14.99 - 5 Pieces",
-    description:
-      "Savory chicken patties made with ground chicken, herbs, and spices, encased in a flaky pastry crust. Ideal for busy families in Scarborough and across the GTA looking for easy, tasty snacks.",
-    image:
-      "https://images.unsplash.com/photo-1654491462841-c8acb0de47d2?q=80&w=1545&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    name: "Tihar Combo 1",
-    slug: "tihar-combo-1",
-    price: "CAD$39.99",
-    description:
-      "Limited-time Tihar offer: 50 handcrafted momos + 1 serving of keema noodles. Pre-order yours today — Nov 7-11, while stock lasts.",
-    image:
-      "https://images.pexels.com/photos/3926123/pexels-photo-3926123.jpeg",
-  },
-  {
-    name: "Tihar Combo 2",
-    slug: "tihar-combo-2",
-    price: "CAD$74.99",
-    description:
-      "Limited-time Tihar offer: 100 handcrafted momos + 2 servings of keema noodles. Perfect for Laxmi Puja and Bhai Tika family feasts.",
-    image:
-      "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
-  },
-];
+// Featured items are no longer hardcoded here: name, description, price
+// and stock come from the Square catalog (see lib/square-catalog.ts).
+// Items not in Square — e.g. the expired Tihar combos — no longer show.
 
 const bannerImages = [
   "https://images.unsplash.com/photo-1667984849405-9d779b049d74?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.pexels.com/photos/4223948/pexels-photo-4223948.jpeg",
-  "https://images.pexels.com/photos/18803174/pexels-photo-18803174.jpeg",
+  "https://ik.imagekit.io/qd2adfgrv/momo-cover.avif",
+  "https://ik.imagekit.io/qd2adfgrv/keema-noodles-cover.avif",
   "https://images.unsplash.com/photo-1615801626674-7147f40de968?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
@@ -152,7 +100,8 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  const { items: featuredItems } = await getCatalogMenu();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -199,8 +148,10 @@ export default function Home() {
         offers: {
           "@type": "Offer",
           priceCurrency: "CAD",
-          price: item.price.split(" ")[0].replace("CAD$", ""),
-          availability: "https://schema.org/InStock",
+          price: (item.priceCents / 100).toFixed(2),
+          availability: item.inStock
+            ? "https://schema.org/InStock"
+            : "https://schema.org/OutOfStock",
         },
       })),
     },
@@ -291,9 +242,8 @@ export default function Home() {
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {featuredItems.map((item) => (
-              <Link
+              <article
                 key={item.slug}
-                href={`/menu/${item.slug}`}
                 className="group overflow-hidden border border-white/10 transition duration-300 hover:border-yellow-400/30"
               >
                 <div className="relative aspect-[16/10]">
@@ -309,16 +259,18 @@ export default function Home() {
                     <h3 className="text-xl font-semibold group-hover:text-yellow-300">
                       {item.name}
                     </h3>
-                    <p className="text-right text-yellow-300">{item.price}</p>
+                    <p className="text-right text-yellow-300">
+                      CAD${(item.priceCents / 100).toFixed(2)} - {item.unit}
+                    </p>
                   </div>
                   <p className="mt-3 text-sm leading-6 text-white/65">
                     {item.description}
                   </p>
-                  <p className="mt-4 inline-block text-sm text-yellow-300 hover:text-yellow-400">
-                    Learn More →
-                  </p>
                 </div>
-              </Link>
+                <div className="border-t border-white/10 p-5">
+                  <AddToCartButton slug={item.slug} />
+                </div>
+              </article>
             ))}
           </div>
         </section>
