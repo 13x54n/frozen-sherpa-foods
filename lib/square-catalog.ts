@@ -119,7 +119,9 @@ async function fetchCatalogFromSquare(): Promise<MenuItem[]> {
         catalogObjectIds: variationIds,
         locationIds: [locationId],
       });
-      for (const count of countsRes.counts ?? []) {
+      // batchGetCounts returns a paginated Page, not a response with
+      // a .counts array — it is async-iterable over the counts.
+      for await (const count of countsRes) {
         if (count.state !== "IN_STOCK" || !count.catalogObjectId) continue;
         const qty = parseInt(count.quantity ?? "0", 10);
         countsByVariation.set(
@@ -156,9 +158,19 @@ function mapSquareItem(
   imageById: Map<string, string>,
   countsByVariation: Map<string, number>,
 ): MenuItem | null {
+  if (obj.type !== "ITEM" || !obj.itemData) {
+    return null;
+  }
   const data = obj.itemData;
   const variation = data?.variations?.[0];
-  const priceMoney = variation?.itemVariationData?.priceMoney;
+  if (
+    !variation ||
+    variation.type !== "ITEM_VARIATION" ||
+    !variation.itemVariationData
+  ) {
+    return null;
+  }
+  const priceMoney = variation.itemVariationData?.priceMoney;
   if (!data?.name || !variation?.id || priceMoney?.amount == null) {
     return null;
   }
