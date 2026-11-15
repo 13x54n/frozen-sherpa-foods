@@ -107,7 +107,7 @@ export async function POST(req: NextRequest) {
               : {}),
             basePriceMoney: {
               amount: BigInt(line.item.priceCents),
-              currency: "CAD",
+              currency: "CAD" as const,
             },
           })),
           ...(deliveryCents > 0
@@ -117,7 +117,7 @@ export async function POST(req: NextRequest) {
                   quantity: "1",
                   basePriceMoney: {
                     amount: BigInt(deliveryCents),
-                    currency: "CAD",
+                    currency: "CAD" as const,
                   },
                 },
               ]
